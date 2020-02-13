@@ -10,24 +10,12 @@ class DataController {
     }
 
     func configure() {
-        apiClient.fetchRequest(StatusApiRequest()) { [weak self] (statuses: [Status]) in
-            DispatchQueue.main.async {
-                self?.viewModel.statuses = statuses
-            }
-        }
-//        viewModel.statuses =
-//        [Status(type: StatusType.off,
-//               comment: "test comment 1",
-//               user: User(firstName: "Wojtek",
-//                          lastName: "Nowak")),
-//        Status(type: StatusType.remote,
-//               comment: "test comment 2",
-//               user: User(firstName: "Kewin",
-//                          lastName: "Sam w domu")),
-//        Status(type: StatusType.sickLeave,
-//               comment: "test comment 3",
-//               user: User(firstName: "Filip",
-//                          lastName: "Gryn"))]
+//        apiClient.fetchRequest(StatusApiRequest()) { [weak self] (statuses: [Status]) in
+//            DispatchQueue.main.async {
+//                self?.viewModel.statuses = statuses
+//            }
+//        }
+        viewModel.statuses = Status.mocks
     }
 
     // MARK: - Privates

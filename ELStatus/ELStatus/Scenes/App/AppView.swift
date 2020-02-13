@@ -7,13 +7,13 @@ struct AppView: View {
         TabView {
             StatusesView().environmentObject(viewModel)
                 .tabItem {
-                    Image(systemName: "1.circle")
-                    Text("First")
+                    Image(systemName: "person.3.fill")
+                    Text("Finder")
                 }.tag(0)
             Text("Second View")
                 .tabItem {
-                    Image(systemName: "2.circle")
-                    Text("Second")
+                    Image(systemName: "pencil")
+                    Text("My Status")
                 }.tag(1)
         }
         
@@ -23,18 +23,7 @@ struct AppView: View {
 struct AppViewView_Previews: PreviewProvider {
     static var previews: some View {
         let viewModel = AppViewModel()
-        viewModel.statuses = [Status(type: StatusType.off,
-                                     comment: "test comment 1",
-                                     user: User(firstName: "FirstName1",
-                                                lastName: "LastName1")),
-                              Status(type: StatusType.off,
-                                     comment: "test comment 2",
-                                     user: User(firstName: "FirstName2",
-                                                lastName: "LastName2")),
-                              Status(type: StatusType.off,
-                                     comment: "test comment 3",
-                                     user: User(firstName: "FirstName3",
-                                                lastName: "LastName4"))]
+        viewModel.statuses = Status.mocks
         return AppView().environmentObject(viewModel)
     }
 }

@@ -31,6 +31,8 @@
 		86FCFB1523F5CC960055CD9A /* StatusType_Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FCFB1423F5CC960055CD9A /* StatusType_Emoji.swift */; };
 		86FCFB1823F5D20D0055CD9A /* StatusesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FCFB1723F5D20D0055CD9A /* StatusesView.swift */; };
 		86FCFB1A23F5D9FD0055CD9A /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FCFB1923F5D9FD0055CD9A /* SearchBar.swift */; };
+		86FCFB1C23F5F3C00055CD9A /* Status_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FCFB1B23F5F3C00055CD9A /* Status_Data.swift */; };
+		86FCFB1E23F5F5B30055CD9A /* String_ToDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FCFB1D23F5F5B30055CD9A /* String_ToDate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		86FCFB1423F5CC960055CD9A /* StatusType_Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusType_Emoji.swift; sourceTree = "<group>"; };
 		86FCFB1723F5D20D0055CD9A /* StatusesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusesView.swift; sourceTree = "<group>"; };
 		86FCFB1923F5D9FD0055CD9A /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		86FCFB1B23F5F3C00055CD9A /* Status_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status_Data.swift; sourceTree = "<group>"; };
+		86FCFB1D23F5F5B30055CD9A /* String_ToDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String_ToDate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,7 @@
 				86D9691123F56AD00051B32A /* LaunchScreen.storyboard */,
 				86D9691423F56AD00051B32A /* Info.plist */,
 				86D9690E23F56AD00051B32A /* Preview Content */,
+				86FCFB1B23F5F3C00055CD9A /* Status_Data.swift */,
 			);
 			path = ELStatus;
 			sourceTree = "<group>";
@@ -240,6 +245,7 @@
 				86FCFAE923F595E50055CD9A /* StatusType.swift */,
 				86FCFB1723F5D20D0055CD9A /* StatusesView.swift */,
 				86FCFB1923F5D9FD0055CD9A /* SearchBar.swift */,
+				86FCFB1D23F5F5B30055CD9A /* String_ToDate.swift */,
 			);
 			path = Stasuses;
 			sourceTree = "<group>";
@@ -371,8 +377,10 @@
 				86FCFB1A23F5D9FD0055CD9A /* SearchBar.swift in Sources */,
 				86FCFB1323F5C92B0055CD9A /* StatusView.swift in Sources */,
 				86D9690723F56ACF0051B32A /* AppDelegate.swift in Sources */,
+				86FCFB1C23F5F3C00055CD9A /* Status_Data.swift in Sources */,
 				86D9690923F56ACF0051B32A /* SceneDelegate.swift in Sources */,
 				86FCFAF723F59ED00055CD9A /* BaseUrlProvider.swift in Sources */,
+				86FCFB1E23F5F5B30055CD9A /* String_ToDate.swift in Sources */,
 				86FCFAE623F5937A0055CD9A /* User.swift in Sources */,
 				86FCFAEA23F595E50055CD9A /* StatusType.swift in Sources */,
 				86FCFAEC23F5970D0055CD9A /* StatusService.swift in Sources */,

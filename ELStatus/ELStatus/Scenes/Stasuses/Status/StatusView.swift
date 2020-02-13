@@ -28,8 +28,6 @@ struct StatusView: View {
 
 struct StatusView_Previews: PreviewProvider {
     static var previews: some View {
-        StatusView(Status(type: StatusType.remote,
-                          comment: "dziś mnie swędzi",
-                          user: User(firstName: "Wojtek", lastName: "Nowak")))
+        StatusView(Status.mocks.first!)
     }
 }

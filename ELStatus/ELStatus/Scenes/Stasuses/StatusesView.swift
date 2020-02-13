@@ -11,11 +11,13 @@ struct StatusesView: View {
                         .padding(.horizontal)
                 }
                 List {
-                    ForEach(viewModel.statuses.filter { shouldShowStatus($0) }) { status in
+                    ForEach(viewModel.statuses
+                        .sorted(by: { $0.dateModifiedString.toDate() > $1.dateModifiedString.toDate() })
+                        .filter { shouldShowStatus($0) }) { status in
                         StatusView(status)
                     }
                 }
-            }.navigationBarTitle("People finder")
+            }.navigationBarTitle("People finder 👬👬👬")
         }
     }
 
@@ -34,18 +36,7 @@ struct StatusesView: View {
 struct StatusesView_Previews: PreviewProvider {
     static var previews: some View {
         let viewModel = AppViewModel()
-        viewModel.statuses = [Status(type: StatusType.remote,
-                                             comment: "lekarz cały dzień",
-                                             user: User(firstName: "Wojtek", lastName: "Nowak")),
-                                      Status(type: StatusType.remote,
-                                             comment: "lekarz cały dzień",
-                                             user: User(firstName: "Michał", lastName: "Nowak")),
-                                      Status(type: StatusType.remote,
-                                             comment: "lekarz cały dzień",
-                                             user: User(firstName: "Piotrek", lastName: "Nowak")),
-                                      Status(type: StatusType.remote,
-                                             comment: "lekarz cały dzień",
-                                             user: User(firstName: "Maciej", lastName: "Nowak"))]
+        viewModel.statuses = Status.mocks
         return StatusesView().environmentObject(viewModel)
     }
 }
