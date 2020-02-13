@@ -1,11 +1,3 @@
-//
-//  ContentView.swift
-//  ELStatus
-//
-//  Created by Bartłomiej Guminiak on 13/02/2020.
-//  Copyright © 2020 El Passion. All rights reserved.
-//
-
 import SwiftUI
 
 struct ContentView: View {
