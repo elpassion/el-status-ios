@@ -5,8 +5,8 @@
         "package": "Networking",
         "repositoryURL": "https://github.com/bartguminiak/networking",
         "state": {
-          "branch": "master",
-          "revision": "88eb79e017512d2a3cd7c2df379db3b0c84e3c26",
+          "branch": null,
+          "revision": "cbbe725c38388b871acccd622cc2104f1d028f2a",
           "version": null
         }
       }
