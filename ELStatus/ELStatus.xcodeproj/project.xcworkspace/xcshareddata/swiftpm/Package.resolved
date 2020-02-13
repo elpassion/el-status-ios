@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Networking",
+        "repositoryURL": "https://github.com/bartguminiak/networking",
+        "state": {
+          "branch": "master",
+          "revision": "88eb79e017512d2a3cd7c2df379db3b0c84e3c26",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
