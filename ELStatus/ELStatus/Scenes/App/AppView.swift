@@ -10,7 +10,7 @@ struct AppView: View {
                     Image(systemName: "person.3.fill")
                     Text("Finder")
                 }.tag(0)
-            Text("Second View")
+            Image("proj")
                 .tabItem {
                     Image(systemName: "pencil")
                     Text("My Status")

@@ -10,17 +10,23 @@ class DataController {
     }
 
     func configure() {
-//        apiClient.fetchRequest(StatusApiRequest()) { [weak self] (statuses: [Status]) in
-//            DispatchQueue.main.async {
-//                self?.viewModel.statuses = statuses
-//            }
-//        }
-        viewModel.statuses = Status.mocks
+        refresh()
     }
 
     // MARK: - Privates
 
     private let apiClient: ApiClientType
     private let viewModel: AppViewModel
+
+    private func refresh() {
+        apiClient.fetchRequest(StatusApiRequest()) { [weak self] (statuses: [Status]) in
+            DispatchQueue.main.async {
+                self?.viewModel.statuses = statuses
+            }
+            DispatchQueue.global().asyncAfter(
+                deadline: .now() + 2,
+                execute: { self?.refresh() })
+        }
+    }
 
 }

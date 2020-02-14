@@ -8,14 +8,18 @@ struct StatusesView: View {
             VStack {
                 HStack {
                     SearchBar(text: $searchText)
-                        .padding(.horizontal)
+                        .padding(.trailing, 24.0)
+                        .padding(.leading)
+                    Spacer()
+                    ToggleButton(isOn: $isFavourite)
+                        .padding(.trailing, 24.0)
                 }
                 List {
                     ForEach(viewModel.statuses
                         .sorted(by: { $0.dateModifiedString.toDate() > $1.dateModifiedString.toDate() })
                         .filter { shouldShowStatus($0) }) { status in
-                        StatusView(status)
-                    }
+                            StatusView(status)
+                        }
                 }
             }.navigationBarTitle("People finder 👬👬👬")
         }
@@ -23,13 +27,18 @@ struct StatusesView: View {
 
     // MARK: - Privates
 
+    @State private var isFavourite = false
     @State private var searchText = ""
+
     private func shouldShowStatus(_ status: Status) -> Bool {
-        guard !searchText.isEmpty else { return true }
         let input = "\(status.user.firstName)\(status.user.lastName)".lowercased()
         let capitalizedSearch = searchText.lowercased()
-        return input.contains(capitalizedSearch)
+        let containsSearchPhrase = searchText.isEmpty ? true : input.contains(capitalizedSearch)
+        let isIdFavourite = isFavourite ? favouriteIds.contains(status.id) : true
+        return containsSearchPhrase && isIdFavourite
     }
+
+    private let favouriteIds = [1, 4, 7]
 
 }
 

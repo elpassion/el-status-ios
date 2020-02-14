@@ -8,13 +8,29 @@ struct StatusView: View {
     var body: some View {
         HStack {
             Text("\(status.user.firstName) \(status.user.lastName)")
+                .frame(width: 120, height: nil, alignment: Alignment.leading)
                 .font(.headline)
-                .padding(.leading)
+                .foregroundColor(isDefaultStatus ? .gray : .black)
+            VStack {
+                if !isDefaultStatus {
+                    HStack {
+                        Text("❝\(status.comment)❞")
+                            .font(.callout)
+                            .foregroundColor(.gray)
+                            .multilineTextAlignment(.leading)
+                            .padding(.leading)
+                        Spacer()
+                    }
+                    HStack {
+                        Spacer()
+                        Text("🕓 last update:  \(status.dateModifiedString.toDate().toSimpleDataString())")
+                            .font(.caption)
+                            .foregroundColor(Color.gray)
+                            .padding([.top, .trailing])
+                    }
+                }
+            }
             Spacer()
-            Text("❝\(status.comment)❞")
-                .font(.callout)
-                .foregroundColor(.gray)
-                .padding()
             Text(status.type.emoji)
                 .padding(.trailing)
         }
@@ -24,6 +40,9 @@ struct StatusView: View {
     // MARK: - Privates
 
     private let status: Status
+    private var isDefaultStatus: Bool {
+        status.type == .office
+    }
 }
 
 struct StatusView_Previews: PreviewProvider {

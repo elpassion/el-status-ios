@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		86A3D01E23F6C71300B26887 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A3D01D23F6C71300B26887 /* ToggleButton.swift */; };
+		86A3D02023F6D06600B26887 /* Date_SimpleString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A3D01F23F6D06600B26887 /* Date_SimpleString.swift */; };
 		86D9690723F56ACF0051B32A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D9690623F56ACF0051B32A /* AppDelegate.swift */; };
 		86D9690923F56ACF0051B32A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D9690823F56ACF0051B32A /* SceneDelegate.swift */; };
 		86D9690B23F56ACF0051B32A /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D9690A23F56ACF0051B32A /* AppView.swift */; };
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		86A3D01D23F6C71300B26887 /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
+		86A3D01F23F6D06600B26887 /* Date_SimpleString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date_SimpleString.swift; sourceTree = "<group>"; };
 		86D9690323F56ACF0051B32A /* ELStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ELStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D9690623F56ACF0051B32A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86D9690823F56ACF0051B32A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -246,6 +250,8 @@
 				86FCFB1723F5D20D0055CD9A /* StatusesView.swift */,
 				86FCFB1923F5D9FD0055CD9A /* SearchBar.swift */,
 				86FCFB1D23F5F5B30055CD9A /* String_ToDate.swift */,
+				86A3D01D23F6C71300B26887 /* ToggleButton.swift */,
+				86A3D01F23F6D06600B26887 /* Date_SimpleString.swift */,
 			);
 			path = Stasuses;
 			sourceTree = "<group>";
@@ -374,11 +380,13 @@
 				86FCFAF923F59F220055CD9A /* UserAccessToken.swift in Sources */,
 				86FCFB1823F5D20D0055CD9A /* StatusesView.swift in Sources */,
 				86FCFB0C23F5B75D0055CD9A /* AppViewModel.swift in Sources */,
+				86A3D02023F6D06600B26887 /* Date_SimpleString.swift in Sources */,
 				86FCFB1A23F5D9FD0055CD9A /* SearchBar.swift in Sources */,
 				86FCFB1323F5C92B0055CD9A /* StatusView.swift in Sources */,
 				86D9690723F56ACF0051B32A /* AppDelegate.swift in Sources */,
 				86FCFB1C23F5F3C00055CD9A /* Status_Data.swift in Sources */,
 				86D9690923F56ACF0051B32A /* SceneDelegate.swift in Sources */,
+				86A3D01E23F6C71300B26887 /* ToggleButton.swift in Sources */,
 				86FCFAF723F59ED00055CD9A /* BaseUrlProvider.swift in Sources */,
 				86FCFB1E23F5F5B30055CD9A /* String_ToDate.swift in Sources */,
 				86FCFAE623F5937A0055CD9A /* User.swift in Sources */,
